@@ -54,38 +54,63 @@ const Blog = () => {
             excerpt: "Learn to identify the early warning signs of a heart attack, including symptoms that are often overlooked, especially in women.",
             date: "February 5, 2024",
             readTime: "5 min read",
-            image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=800&auto=format&fit=crop",
+            image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800&auto=format&fit=crop",
             category: "Emergency"
         }
     ];
 
     const categories = ["All", "Nutrition", "Exercise", "Prevention", "Education", "Wellness", "Emergency"];
 
+    const getCategoryGradient = (category) => {
+        const gradients = {
+            "Nutrition": "from-green-500 to-emerald-500",
+            "Exercise": "from-orange-500 to-red-500",
+            "Prevention": "from-blue-500 to-cyan-500",
+            "Education": "from-purple-500 to-pink-500",
+            "Wellness": "from-indigo-500 to-purple-500",
+            "Emergency": "from-red-500 to-pink-500"
+        };
+        return gradients[category] || "from-blue-500 to-purple-500";
+    };
+
     return (
         <div className="pt-16">
-            {/* Hero Section */}
-            <section className="py-20 bg-gradient-to-br from-medical-lightblue to-white">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            {/* Enhanced Hero Section */}
+            <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+                <div className="absolute inset-0">
+                    <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
+                    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-indigo-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+                </div>
+
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full border border-blue-200/50 mb-8 backdrop-blur-sm">
+                        <span className="text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                            📚 Medical Insights
+                        </span>
+                    </div>
                     <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-fade-in-up">
-                        Heart Health Insights
+                        Heart Health{" "}
+                        <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                            Insights
+                        </span>
                     </h1>
                     <p className="text-xl text-gray-600 leading-relaxed animate-fade-in">
                         Evidence-based articles on cardiovascular health, prevention strategies,
-                        and wellness tips from Dr. Olulana.
+                        and wellness tips from Dr. Olulana
                     </p>
                 </div>
             </section>
 
-            {/* Categories */}
-            <section className="py-8 bg-white border-b border-gray-200">
+            {/* Enhanced Categories */}
+            <section className="py-12 bg-gradient-to-b from-white to-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-wrap justify-center gap-4">
                         {categories.map((category) => (
                             <button
                                 key={category}
-                                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${category === "All"
-                                        ? "bg-medical-blue text-white"
-                                        : "bg-gray-100 text-gray-700 hover:bg-medical-lightblue hover:text-medical-blue"
+                                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${category === "All"
+                                        ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-blue-500/25"
+                                        : "bg-white text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 border border-gray-200 hover:border-blue-300"
                                     }`}
                             >
                                 {category}
@@ -95,20 +120,26 @@ const Blog = () => {
                 </div>
             </section>
 
-            {/* Blog Grid */}
-            <section className="py-16 bg-medical-lightgray">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Enhanced Blog Grid */}
+            <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+                <div className="absolute inset-0">
+                    <div className="absolute top-0 left-1/4 w-72 h-72 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-gradient-to-br from-indigo-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
+                </div>
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {blogPosts.map((post, index) => (
-                            <Card key={post.slug} className={`bg-white border-0 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in`} style={{ animationDelay: `${index * 0.1}s` }}>
-                                <div className="aspect-w-16 aspect-h-9 relative overflow-hidden rounded-t-lg">
+                            <Card key={post.slug} className={`bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105 animate-fade-in rounded-2xl overflow-hidden group`} style={{ animationDelay: `${index * 0.1}s` }}>
+                                <div className="relative overflow-hidden">
                                     <img
                                         src={post.image}
                                         alt={post.title}
-                                        className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                                        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                     <div className="absolute top-4 left-4">
-                                        <span className="bg-medical-blue text-white px-3 py-1 rounded-full text-xs font-medium">
+                                        <span className={`bg-gradient-to-r ${getCategoryGradient(post.category)} text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg`}>
                                             {post.category}
                                         </span>
                                     </div>
@@ -119,7 +150,7 @@ const Blog = () => {
                                         <span className="mx-2">•</span>
                                         <span>{post.readTime}</span>
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 hover:text-medical-blue transition-colors duration-200">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
                                         <Link to={`/blog/${post.slug}`}>
                                             {post.title}
                                         </Link>
@@ -129,10 +160,10 @@ const Blog = () => {
                                     </p>
                                     <Link
                                         to={`/blog/${post.slug}`}
-                                        className="inline-flex items-center text-medical-blue font-medium hover:text-blue-700 transition-colors duration-200"
+                                        className="inline-flex items-center text-blue-600 font-medium hover:text-purple-600 transition-colors duration-300 group-hover:translate-x-1"
                                     >
                                         Read More
-                                        <span className="ml-2">→</span>
+                                        <span className="ml-2 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
                                     </Link>
                                 </CardContent>
                             </Card>
@@ -141,20 +172,31 @@ const Blog = () => {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-16 bg-medical-blue">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-6">Stay Updated</h2>
-                    <p className="text-xl text-blue-100 mb-8">
+            {/* Enhanced Newsletter CTA */}
+            <section className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 relative overflow-hidden">
+                <div className="absolute inset-0">
+                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-800/20 to-purple-800/20"></div>
+                    <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+                    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+                </div>
+
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <div className="inline-flex items-center px-4 py-2 bg-white/10 rounded-full border border-white/20 mb-8 backdrop-blur-sm">
+                        <span className="text-sm font-medium text-white">
+                            📧 Stay Connected
+                        </span>
+                    </div>
+                    <h2 className="text-4xl font-bold text-white mb-6">Stay Updated</h2>
+                    <p className="text-xl text-blue-100 mb-10">
                         Subscribe to receive the latest heart health insights and tips directly in your inbox.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                         <input
                             type="email"
                             placeholder="Enter your email"
-                            className="flex-1 px-4 py-3 rounded-lg border-0 text-gray-900 placeholder-gray-500"
+                            className="flex-1 px-6 py-4 rounded-xl border-0 text-gray-900 placeholder-gray-500 shadow-lg backdrop-blur-sm bg-white/90 focus:ring-2 focus:ring-white/50 focus:outline-none transition-all duration-300"
                         />
-                        <button className="bg-white text-medical-blue px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200">
+                        <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                             Subscribe
                         </button>
                     </div>
