@@ -38,12 +38,12 @@ const Header = () => {
                             <Link
                                 key={item.name}
                                 to={item.href}
-                                className={`text-sm font-medium transition-colors duration-200 relative hover:text-medical-blue ${isActive(item.href) ? "text-medical-darkblue" : "text-white"
+                                className={`group font-jost text-sm font-medium transition-colors duration-200 relative hover:text-medical-blue ${isActive(item.href) ? "text-medical-darkblue" : "text-white"
                                     }`}
                             >
                                 {item.name}
                                 {isActive(item.href) && (
-                                    <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-medical-darkblue rounded-full"></div>
+                                    <div className="group-hover:bg-medical-blue absolute -bottom-1 left-0 right-0 h-0.5 bg-medical-darkblue rounded-full duration-200"></div>
                                 )}
                             </Link>
                         ))}
@@ -75,7 +75,7 @@ const Header = () => {
                             <Link
                                 key={item.name}
                                 to={item.href}
-                                className={`block text-sm font-medium transition-colors duration-200 ${isActive(item.href) ? "text-medical-blue" : "text-gray-700"
+                                className={`font-jost block text-sm font-medium transition-colors duration-200 ${isActive(item.href) ? "text-medical-blue font-jost " : "font-jost text-gray-700"
                                     }`}
                                 onClick={() => setIsMenuOpen(false)}
                             >

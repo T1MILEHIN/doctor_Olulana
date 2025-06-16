@@ -150,7 +150,7 @@ const Blog = () => {
                                         <span className="mx-2">•</span>
                                         <span>{post.readTime}</span>
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-medical-blue transition-colors duration-300">
                                         <Link to={`/blog/${post.slug}`}>
                                             {post.title}
                                         </Link>
