@@ -29,7 +29,7 @@ const Home = () => {
                                 </span>{" "}
                                 Health
                             </h1>
-                            <p className="text-xl text-white mb-8 leading-relaxed ">
+                            <p className="font-jost text-xl text-white mb-8 leading-relaxed ">
                                 Board-certified Consultant Cardiologist with over 15 years of experience in
                                 preventive cardiology and advanced heart disease management.
                             </p>
