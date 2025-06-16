@@ -59,7 +59,7 @@ const Home = () => {
                                     alt="Dr. Olulana"
                                     className="relative w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl border-4 border-white transform group-hover:scale-105 transition-all duration-500"
                                 />
-                                <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 rounded-full shadow-lg animate-bounce">
+                                <div className="absolute bottom-24 lg:-bottom-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 rounded-full shadow-lg animate-bounce">
                                     <span className="text-2xl">❤️</span>
                                 </div>
                             </div>
