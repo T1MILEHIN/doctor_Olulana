@@ -20,6 +20,7 @@ export default {
     extend: {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
+        'jost': ['Jost', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -56,8 +57,9 @@ export default {
           foreground: 'hsl(var(--card-foreground))'
         },
         medical: {
-          blue: '#2563eb',
-          lightblue: '#dbeafe',
+          blue: '#00cdec',
+          lightblue: '#00cdec',
+          darkblue: '#111465',
           gray: '#6b7280',
           lightgray: '#f8fafc'
         }

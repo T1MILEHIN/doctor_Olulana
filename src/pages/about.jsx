@@ -19,9 +19,9 @@ const About = () => {
     ];
 
     return (
-        <div className="pt-16">
+        <div className="">
             {/* Enhanced Hero Section */}
-            <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+            <section className="py-20 lg:py-32 bg-gradient-to-br from-blue-50 via-medical-lightblue to-medical-darkblue relative overflow-hidden" style={{clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)'}}>
                 <div className="absolute inset-0">
                     <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
                     <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-indigo-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -31,7 +31,7 @@ const About = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="animate-fade-in-up">
                             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full border border-blue-200/50 mb-6 backdrop-blur-sm">
-                                <span className="text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                                <span className="font-jost text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                                     👩‍⚕️ Meet Your Cardiologist
                                 </span>
                             </div>
@@ -41,7 +41,7 @@ const About = () => {
                                     Dr. Olulana
                                 </span>
                             </h1>
-                            <p className="text-xl text-gray-600 leading-relaxed">
+                            <p className="text-xl text-white leading-relaxed font-jost">
                                 With over 15 years of dedicated service in cardiovascular medicine,
                                 I am committed to providing exceptional, personalized care to each of my patients.
                             </p>
@@ -145,7 +145,7 @@ const About = () => {
                     <div className="space-y-6">
                         {certifications.map((cert, index) => (
                             <div key={index} className="flex items-center space-x-6 p-6 bg-white/80 backdrop-blur-sm rounded-2xl hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl group">
-                                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                                <div className="w-12 h-12 bg-gradient-to-br from-medical-blue to-purple-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                                     <span className="text-white text-lg font-bold">✓</span>
                                 </div>
                                 <p className="text-gray-800 font-medium text-lg group-hover:text-blue-700 transition-colors duration-300">{cert}</p>
@@ -156,7 +156,7 @@ const About = () => {
             </section>
 
             {/* Enhanced Philosophy */}
-            <section className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 relative overflow-hidden">
+            <section className="py-20 bg-medical-darkblue relative overflow-hidden">
                 <div className="absolute inset-0">
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-800/20 to-purple-800/20"></div>
                     <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>

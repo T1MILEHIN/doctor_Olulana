@@ -74,9 +74,9 @@ const Blog = () => {
     };
 
     return (
-        <div className="pt-16">
+        <div className="">
             {/* Enhanced Hero Section */}
-            <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+            <section className="py-20 lg:py-32 bg-gradient-to-br from-blue-50 via-medical-lightblue to-medical-darkblue relative overflow-hidden" style={{clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)'}}>
                 <div className="absolute inset-0">
                     <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
                     <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-indigo-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -84,7 +84,7 @@ const Blog = () => {
 
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                     <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full border border-blue-200/50 mb-8 backdrop-blur-sm">
-                        <span className="text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        <span className="font-jost text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                             📚 Medical Insights
                         </span>
                     </div>
@@ -94,7 +94,7 @@ const Blog = () => {
                             Insights
                         </span>
                     </h1>
-                    <p className="text-xl text-gray-600 leading-relaxed animate-fade-in">
+                    <p className="font-jost text-xl text-white leading-relaxed animate-fade-in">
                         Evidence-based articles on cardiovascular health, prevention strategies,
                         and wellness tips from Dr. Olulana
                     </p>
@@ -108,7 +108,7 @@ const Blog = () => {
                         {categories.map((category) => (
                             <button
                                 key={category}
-                                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${category === "All"
+                                className={`font-jost px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${category === "All"
                                         ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-blue-500/25"
                                         : "bg-white text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 border border-gray-200 hover:border-blue-300"
                                     }`}
@@ -145,7 +145,7 @@ const Blog = () => {
                                     </div>
                                 </div>
                                 <CardContent className="p-6">
-                                    <div className="flex items-center text-sm text-gray-500 mb-3">
+                                    <div className="font-jost flex items-center text-sm text-gray-500 mb-3">
                                         <time>{post.date}</time>
                                         <span className="mx-2">•</span>
                                         <span>{post.readTime}</span>
@@ -155,12 +155,12 @@ const Blog = () => {
                                             {post.title}
                                         </Link>
                                     </h3>
-                                    <p className="text-gray-600 mb-4 line-clamp-3">
+                                    <p className="font-jost text-gray-600 mb-4 line-clamp-3">
                                         {post.excerpt}
                                     </p>
                                     <Link
                                         to={`/blog/${post.slug}`}
-                                        className="inline-flex items-center text-blue-600 font-medium hover:text-purple-600 transition-colors duration-300 group-hover:translate-x-1"
+                                        className="inline-flex items-center text-medical-blue font-medium hover:text-purple-600 transition-colors duration-300 group-hover:translate-x-1"
                                     >
                                         Read More
                                         <span className="ml-2 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -173,7 +173,7 @@ const Blog = () => {
             </section>
 
             {/* Enhanced Newsletter CTA */}
-            <section className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 relative overflow-hidden">
+            <section className="py-20 bg-medical-darkblue relative overflow-hidden">
                 <div className="absolute inset-0">
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-800/20 to-purple-800/20"></div>
                     <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
