@@ -1,11 +1,13 @@
+import { lazy, Suspense } from "react";
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import HomeLayout from "./layout/homeLayout";
-import Home from "./pages/home";
-import About from "./pages/about";
-import Blog from "./pages/blog";
+import Loader from "./components/loader";
+const HomeLayout = lazy(()=> import("./layout/homeLayout"));
+const Home = lazy(()=> import("./pages/home"));
+const About = lazy(()=> import("./pages/about"))
+const Blog = lazy(()=> import("./pages/blog"))
 import BlogPost from "./pages/blogPost";
 import NotFound from "./pages/notFound"
 
@@ -13,20 +15,36 @@ import NotFound from "./pages/notFound"
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomeLayout/>,
+    element: (
+      <Suspense fallback={<Loader/>}>
+        <HomeLayout/>
+      </Suspense>
+    ),
     errorElement: <NotFound/>,
     children: [
       {
         index: true,
-        element: <Home />
+        element: (
+          <Suspense fallback={<Loader/>}>
+            <Home />
+          </Suspense>
+        )
       },
       {
         path: "/about",
-        element: <About />
+        element: (
+          <Suspense fallback={<Loader/>}>
+            <About />
+          </Suspense>
+        )
       },
       {
         path: "/blog",
-        element: <Blog />
+        element: (
+          <Suspense fallback={<Loader/>}>
+            <Blog />
+          </Suspense>
+        )
       },
       {
         path: "/blog/:slug",
