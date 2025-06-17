@@ -6,14 +6,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return (
         <div className="">
-            {/* Hero Section with Enhanced Gradient */}
-            <section className="relative bg-gradient-to-br from-blue-50 via-medical-lightblue to-medical-darkblue py-20 lg:py-32 overflow-hidden" style={{clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)'}}>
-                {/* Animated Background Elements */}
-                <div className="absolute inset-0 overflow-hidden">
-                    <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
-                    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-indigo-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-                </div>
-
+            <section className="relative bg-gradient-to-br from-blue-50 via-medical-lightblue to-medical-darkblue py-28 lg:py-32 overflow-hidden" style={{clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0 100%)'}}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="animate-fade-in-up">
@@ -24,7 +17,7 @@ const Home = () => {
                             </div>
                             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                                 Caring for Your{" "}
-                                <span className="bg-gradient-to-r from-medical-blue via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-pulse">
+                                <span className="bg-gradient-to-r from-medical-darkblue via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-pulse">
                                     Heart
                                 </span>{" "}
                                 Health
@@ -112,7 +105,7 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <blockquote className="text-xl text-gray-700 mb-8 italic leading-relaxed">
-                                    "Dr. Johnson saved my life. Her expertise in preventive cardiology and compassionate care
+                                    "Dr. Olulana saved my life. Her expertise in preventive cardiology and compassionate care
                                     helped me understand my condition and make the lifestyle changes I needed. I couldn't be more grateful."
                                 </blockquote>
                                 <div className="flex items-center justify-center space-x-4">
@@ -134,7 +127,7 @@ const Home = () => {
                     </div>
                 </section>
                 {/* Enhanced CTA Section */}
-                <section style={{clipPath: 'polygon(0 15%, 100% 0, 100% 85%, 0 100%)'}} id="appointment" className="py-20 bg-medical-darkblue relative overflow-hidden">
+                <section style={{clipPath: 'polygon(0 10%, 100% 0, 100% 90%, 0 100%)'}} id="appointment" className="py-20 bg-medical-darkblue relative overflow-hidden">
                     <div className="absolute inset-0">
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-800/20 to-purple-800/20"></div>
                         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>

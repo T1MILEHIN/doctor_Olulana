@@ -21,6 +21,7 @@ export default {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
         'jost': ['Jost', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',

@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
+import LOGO from "../assets/images/DO-LOGO.png"
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,14 +26,14 @@ const Header = () => {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-gray-100 transition-all duration-300 py-4">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
                 <div className="flex justify-between items-center h-16">
-                    <Link to="/" className="flex items-center space-x-2 group">
-                        <div className="w-10 h-10 bg-medical-darkblue rounded-full flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
-                            <span className="text-white font-bold text-lg">DO</span>
+                    <Link to="/" className="flex items-center group">
+                        <div>
+                            <img src={LOGO} alt="logo" className="size-24"  />
                         </div>
                         <div className="hidden sm:block">
-                            <h1 className="text-xl font-semibold text-gray-900">Dr. Olulana</h1>
+                            <h1 className="text-xl font-semibold text-black font-poppins">Dr. Olulana</h1>
                             <p className="text-sm text-white font-jost">Consultant Cardiologist</p>
                         </div>
                     </Link>

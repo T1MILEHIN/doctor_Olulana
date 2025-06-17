@@ -76,7 +76,7 @@ const Blog = () => {
     return (
         <div className="">
             {/* Enhanced Hero Section */}
-            <section className="py-20 lg:py-32 bg-gradient-to-br from-blue-50 via-medical-lightblue to-medical-darkblue relative overflow-hidden" style={{clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)'}}>
+            <section className="py-28 lg:py-32 bg-gradient-to-br from-blue-50 via-medical-lightblue to-medical-darkblue relative overflow-hidden" style={{clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0 100%)'}}>
                 <div className="absolute inset-0">
                     <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
                     <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-indigo-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
