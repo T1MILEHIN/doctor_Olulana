@@ -30,10 +30,10 @@ const Header = () => {
                 <div className="flex justify-between items-center h-16">
                     <Link to="/" className="flex items-center group">
                         <div>
-                            <img src={LOGO} alt="logo" className="size-24"  />
+                            <img src={LOGO} alt="logo" className="size-40"  />
                         </div>
                         <div className="hidden sm:block">
-                            <h1 className="text-xl font-semibold text-black font-poppins">Dr. Olulana</h1>
+                            <h1 className="text-xl font-semibold text-black font-poppins"> Doctor Olulana</h1>
                             {/* <p className="text-sm text-white font-jost">Consultant Cardiologist</p> */}
                         </div>
                     </Link>

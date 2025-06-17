@@ -18,7 +18,7 @@ const Home = () => {
                             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                                 {" "} Getting Healthy with  {" "}
                                 <span className="bg-gradient-to-r from-medical-darkblue via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-pulse">
-                                   Dr. Olulana
+                                   Doctor Olulana
                                 </span>{" "}
                             
                             </h1>
@@ -30,9 +30,12 @@ const Home = () => {
                                 <Button
                                     asChild
                                     size="lg"
-                                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                                    className="bg-gradient-to-r
+                                   bg-medical-blue
+                                    
+                                    text-white px-8 py-4 text-lg rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                                 >
-                                    <a href="#appointment">Book Consultation</a>
+                                    <a href="#appointment">Book Appointment</a>
                                 </Button>
                                 <Button
                                     asChild
