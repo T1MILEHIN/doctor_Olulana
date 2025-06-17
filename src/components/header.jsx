@@ -38,14 +38,12 @@ const Header = () => {
                         </div>
                     </Link>
 
-                    {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center space-x-8">
                         {navigation.map((item) => (
                             <Link
                                 key={item.name}
                                 to={item.href}
-                                className={`group font-jost text-sm font-medium transition-colors duration-200 relative hover:text-medical-blue ${isActive(item.href) ? "text-medical-darkblue" : "text-white"
-                                    }`}
+                                className={`group font-jost text-sm font-medium transition-colors duration-200 relative hover:text-medical-blue ${isActive(item.href) ? "text-medical-darkblue" : "text-white"}`}
                             >
                                 {item.name}
                                 {isActive(item.href) && (
@@ -67,9 +65,9 @@ const Header = () => {
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         <div className="w-6 h-6 flex flex-col justify-center items-center">
-                            <span className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-0.5' : ''}`}></span>
+                            <span className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 origin-center ${isMenuOpen ? ' rotate-45 translate-y-1' : ''}`}></span>
                             <span className={`block w-6 h-0.5 bg-gray-700 mt-1 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-                            <span className={`block w-6 h-0.5 bg-gray-700 mt-1 transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+                            <span className={`block w-6 h-0.5 bg-gray-700 mt-1 transition-all duration-300 origin-center ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
                         </div>
                     </button>
                 </div>
