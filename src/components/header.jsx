@@ -46,7 +46,7 @@ const Header = () => {
     <header
       className={`z-[999999999999999999999] w-full fixed top-0 left-0 right-0 flex justify-between items-center px-6 md:px-20 transition-all duration-500 ${
         bg
-          ? "bg-gradient-to-b from-black to-transparent dark:bg-gradient-to-b bg-opacity-50 dark:bg-opacity-50"
+          ? "bg-gradient-to-b   from-black to-transparent dark:bg-gradient-to-b bg-opacity-50 dark:bg-opacity-50"
           : "bg-gradient-to-b from-black to-transparent dark:bg-gradient-to-b bg-opacity-50 dark:bg-opacity-50"
       }`}
     >
@@ -56,7 +56,7 @@ const Header = () => {
             <motion.img
               src={bg ? LOGO : LOGO}
               alt="logo"
-              className="size-30 object-contain "
+              className="size-27 object-contain "
               initial={{ rotateY: 0 }}
               animate={{ rotateY: bg ? 360 : 0 }}
               transition={{ duration: 0.5 }}
@@ -105,7 +105,7 @@ const Header = () => {
               }
               to="/gallery"
             >
-              Films
+              Blogs
             </NavLink>
           </li>
           <li className="hover:opacity-70 duration-300">
@@ -117,7 +117,7 @@ const Header = () => {
               }
               to="/contact"
             >
-              Contact
+              Market place
             </NavLink>
           </li>
         </ul>
@@ -135,7 +135,7 @@ const Header = () => {
           <ImYoutube href="https://www.youtube.com/@BamsVisuals" />
         </div>
         <button className="duration-200 text-sm border-2 border-white p-3 px-6 hover:bg-white text-white hover:text-black">
-          <a href="/contact"> Hire Us</a>
+          <a href="/contact" className="font-bold ">AM LIVE</a>
         </button>
       </div>
 
