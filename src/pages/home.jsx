@@ -6,24 +6,24 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return (
         <div className="">
-            <section className="relative bg-gradient-to-br from-blue-50 via-medical-lightblue to-medical-darkblue py-28 lg:py-32 overflow-hidden" style={{clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0 100%)'}}>
+            <section className="relative bg-gradient-to-br from-blue-50 e  py-28 lg:py-32 overflow-hidden" style={{clipPath: 'polygon(0 0, 100% 0, 100% 90%, 0 100%)'}}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="animate-fade-in-up">
                             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full border border-blue-200/50 mb-6 backdrop-blur-sm">
                                 <span className="font-jost text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                                    ✨ Expert Cardiovascular Care
+                                    {/* ✨ Expert Cardiovascular Care */}
                                 </span>
                             </div>
                             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                                Caring for Your{" "}
+                                {" "} Getting Healthy with  {" "}
                                 <span className="bg-gradient-to-r from-medical-darkblue via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-pulse">
-                                    Heart
+                                   Dr. Olulana
                                 </span>{" "}
-                                Health
+                            
                             </h1>
-                            <p className="font-jost text-xl text-white mb-8 leading-relaxed ">
-                                Board-certified Consultant Cardiologist with over 15 years of experience in
+                            <p className="font-jost text-xl  mb-8 leading-relaxed ">
+                                Board-certified Doctor with over 4 years of experience in
                                 preventive cardiology and advanced heart disease management.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">

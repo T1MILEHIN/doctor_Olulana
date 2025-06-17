@@ -34,7 +34,7 @@ const Header = () => {
                         </div>
                         <div className="hidden sm:block">
                             <h1 className="text-xl font-semibold text-black font-poppins">Dr. Olulana</h1>
-                            <p className="text-sm text-white font-jost">Consultant Cardiologist</p>
+                            {/* <p className="text-sm text-white font-jost">Consultant Cardiologist</p> */}
                         </div>
                     </Link>
 
@@ -43,7 +43,7 @@ const Header = () => {
                             <Link
                                 key={item.name}
                                 to={item.href}
-                                className={`group font-jost text-sm font-medium transition-colors duration-200 relative hover:text-medical-blue ${isActive(item.href) ? "text-medical-darkblue" : "text-white"}`}
+                                className={`group font-jost text-sm font-medium transition-colors duration-200 relative hover:text-medical-blue ${isActive(item.href) ? "text-medical-darkblue" : ""}`}
                             >
                                 {item.name}
                                 {isActive(item.href) && (
