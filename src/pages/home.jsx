@@ -12,7 +12,7 @@ const Home = () => {
                         <div className="animate-fade-in-up">
                             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full border border-blue-200/50 mb-6 backdrop-blur-sm">
                                 <span className="font-jost text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                                    {/* ✨ Expert Cardiovascular Care */}
+                                    ✨ Expert
                                 </span>
                             </div>
                             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">

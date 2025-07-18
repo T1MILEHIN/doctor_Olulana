@@ -140,10 +140,10 @@ const Header = () => {
 
             {/* Mobile Navigation Button */}
             <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ rotate: 90 }}
-                className="md:hidden block flex-1 relative z-10"
+                className="md:hidden block relative z-30"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
+                initial={{ rotate: 0 }}
+                whileTap={{ rotate: 90 }}
             >
                 {isMenuOpen ? (
                     <FaXmark size={24} className={bg ? "text-black" : "text-white"} />
@@ -153,13 +153,13 @@ const Header = () => {
             </motion.div>
 
             <AnimatePresence>
-                <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+                <div className={`md:hidden absolute top-26 right-2 left-2 p-4 bg-white rounded-2xl shadow-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                     <nav className="py-4 space-y-4">
                         {navigation.map((item) => (
                             <Link
                                 key={item.name}
                                 to={item.href}
-                                className={`font-jost block text-sm font-medium transition-colors duration-200 ${isActive(item.href) ? "text-medical-blue font-jost " : "font-jost text-gray-700"
+                                className={`font-jost block text-lg font-medium transition-colors duration-200 ${isActive(item.href) ? "text-medical-blue font-jost " : "font-jost text-gray-700"
                                     }`}
                                 onClick={() => setIsMenuOpen(false)}
                             >
